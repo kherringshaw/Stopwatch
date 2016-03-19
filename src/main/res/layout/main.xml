@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/stateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/state"
+        android:layout_centerHorizontal="true" >
+
+
+        <TextView
+            android:id="@+id/seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seconds"
+            android:textSize="80sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/startStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onStartStop"
+            android:text="@string/startStop"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/text"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttons"
+            android:layout_centerHorizontal="true" >
+
+
+        <EditText
+            android:id="@+id/typedDigits"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:textSize="40sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:maxLength="2"
+            android:textStyle="bold"
+            android:background="#00FF00"
+            android:inputType="number"/>
+            <!--android:text="@string/typedDigits"-->
+
+</RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/buttons2"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:layout_centerHorizontal="true" >
+
+        <Button
+                android:id="@+id/populate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/populate"
+                android:onClick="onPopulate"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
